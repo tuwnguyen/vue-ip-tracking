@@ -1,4 +1,5 @@
 <script setup>
+import IPInfo from '@/components/IPInfo.vue'
 </script>
 
 <template>
@@ -19,6 +20,8 @@
             cursor-pointer bg-black text-white rounded-tr-md rounded-br-md flex items-center px-4"></i>
           </div>
         </div>
+        <!-- IP Info -->
+        <IPInfo />
       </div>
     </div>
   </main>
