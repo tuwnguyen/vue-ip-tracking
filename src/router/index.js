@@ -8,8 +8,15 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: {
+        title: 'Ip Tracker',
+      },
     },
   ],
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title}`;
 });
 
 export default router;
