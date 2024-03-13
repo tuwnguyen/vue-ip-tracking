@@ -1,29 +1,17 @@
 # vue-ip-tracking
+IP Tracking
 
-This template should help get you started developing with Vue 3 in Vite.
+### CSS
+ - Tailwindcss
 
-## Recommended IDE Setup
+### Mapping libraries
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+#### Leaflet
+ - [leaflet](https://leafletjs.com/index.html)
+ - `Leaflet` is a lightweight and versatile mapping library that focuses on rendering maps and provides a base for customization.
+ - [Example](https://leafletjs.com/examples/quick-start/)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+#### Mapbox
+ - [Docs](https://docs.mapbox.com/)
+ - `Mapbox` is a comprehensive mapping platform that offers advanced features like geocoding, routing, and data visualization, along with its own tileset and map styling capabilities.
+ - [Style using in project](https://docs.mapbox.com/api/maps/styles/)
