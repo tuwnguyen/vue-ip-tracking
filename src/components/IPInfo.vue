@@ -4,31 +4,36 @@
     <!-- Flex Item #1 -->
     <div class="flex flex-col">
       <h3 class="text-xs mb-2 uppercase">IP Address</h3>
-      <span class="text-2xl">8.8.8.8</span>
+      <span class="text-2xl">{{ ipInfo.address }}</span>
     </div>
 
     <!-- Flex Item #2 -->
     <div class="flex flex-col">
       <h3 class="text-xs mb-2 uppercase">Locaiton</h3>
-      <span class="text-2xl">Michigan</span>
+      <span class="text-2xl">{{ ipInfo.state }}</span>
     </div>
 
     <!-- Flex Item #3 -->
     <div class="flex flex-col">
       <h3 class="text-xs mb-2 uppercase">Timezone</h3>
-      <span class="text-2xl">UTC -07:00</span>
+      <span class="text-2xl">UTC {{ ipInfo.timezone }}</span>
     </div>
 
     <!-- Flex Item #4 -->
     <div class="flex flex-col">
       <h3 class="text-xs mb-2 uppercase">Isp</h3>
-      <span class="text-2xl">Google</span>
+      <span class="text-2xl">{{ ipInfo.isp }}</span>
     </div>
   </div>
 </template>
 
 <script setup>
-
+defineProps({
+  ipInfo: {
+    type: Object,
+    required: true,
+  }
+})
 </script>
 
 <style lang="scss" scoped>
