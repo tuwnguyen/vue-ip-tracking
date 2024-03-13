@@ -51,6 +51,12 @@ const getIpInfo = async () => {
     alert(e.message)
   }
 }
+
+const getCurrentMyIP = async () => {
+  const data = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=at_Kk9zYAKBd5P6NFUo8vZhvXJleq0o2`)
+  queryIp.value = data.data.ip
+  getIpInfo()
+}
 </script>
 
 <template>
@@ -73,6 +79,11 @@ const getIpInfo = async () => {
               @click="getIpInfo"
               class="fa-solid fa-arrow-right 
               cursor-pointer bg-black text-white rounded-tr-md rounded-br-md flex items-center px-4"></i>
+          </div>
+          <div class="pt-2 flex items-center justify-center">
+            <button @click="getCurrentMyIP" type="button" class="focus:outline-none text-white bg-purple-500 hover:bg-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-500 dark:hover:bg-purple-700">
+              Where my public IP?
+            </button>
           </div>
         </div>
 
