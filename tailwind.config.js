@@ -2,7 +2,11 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        'hero-pattern': "url('/img/pattern-bg.png')",
+      }),
+    },
   },
   plugins: [],
 };
